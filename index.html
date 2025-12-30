@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Library Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Smart Library</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#books">Books</a></li>
+                    <li><a href="#request">Request Book</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-secondary" id="loginBtn">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <button class="btn btn-primary" id="signupBtn">
+                    <i class="fas fa-user-plus"></i> Sign Up
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Smart Library Management System</h1>
+            <p>Access thousands of books, check availability in real-time, and submit book requests online from any device. Experience the future of university library management.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+                <button class="btn btn-accent" id="exploreBooks" >
+                    <i class="fas fa-book"></i> Explore Books
+                </button>
+                <button class="btn btn-success" id="requestBookBtn">
+                    <i class="fas fa-plus-circle"></i> Request a Book
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section class="container" id="books">
+        <div class="section-title">
+            <h2>Available Books</h2>
+            <p>Browse our collection of books across various categories</p>
+        </div>
+        
+        <div class="books-grid" id="booksContainer">
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library1.jpg" alt="Library Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 1</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 1')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library2.jpg" alt="Library Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 2</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 2')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library3.jpg" alt="Library Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 3</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 3')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library4.jpg" alt="Library Image 4" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 4</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 4')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library5.jpg" alt="Library Image 5" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 5</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 5')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library6.jpg" alt="Library Image 6" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 6</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 6')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library7.jpg" alt="Library Image 7" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 7</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 7')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="library8.jpg" alt="Library Image 8" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="book-info">
+                    <h3>Library Collection 8</h3>
+                    <p class="book-author">Premium Selection</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="requestSpecificBook('Library Collection 8')">
+                        <i class="fas fa-hand-paper"></i> Request Book
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Book Form Section -->
+    <section class="container" id="request">
+        <div class="section-title">
+            <h2>Request a Book</h2>
+            <p>Can't find the book you need? Submit a request and we'll consider adding it to our collection</p>
+        </div>
+        
+        <div class="request-form">
+            <form id="bookRequestForm">
+                <div class="form-group">
+                    <label for="bookTitle">Book Title *</label>
+                    <input type="text" id="bookTitle" name="bookTitle" required placeholder="Enter the book title">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookAuthor">Author *</label>
+                    <input type="text" id="bookAuthor" name="bookAuthor" required placeholder="Enter the author's name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookIsbn">ISBN (Optional)</label>
+                    <input type="text" id="bookIsbn" name="bookIsbn" placeholder="Enter ISBN if known">
+                </div>
+                
+                <div class="form-group">
+                    <label for="bookCategory">Category *</label>
+                    <select id="bookCategory" name="bookCategory" required>
+                        <option value="">Select a category</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Literature">Literature</option>
+                        <option value="History">History</option>
+                        <option value="Business">Business</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requestReason">Reason for Request *</label>
+                    <textarea id="requestReason" name="requestReason" rows="4" required placeholder="Please explain why you need this book"></textarea>
+                </div>               
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-success" style="flex: 1;">
+                        <i class="fas fa-paper-plane"></i> Submit Request
+                    </button>
+                    <button type="reset" class="btn btn-secondary" style="flex: 1;">
+                        <i class="fas fa-redo"></i> Reset Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="form-container" id="loginForm">
+        <div class="form-box">
+            <button class="close-btn" id="closeLogin">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Login to Your Account</h2>
+            <form id="loginFormElement">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required placeholder="Enter your email">
+                </div>               
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required placeholder="Enter your password">
+                </div>                
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </div>                
+                <div class="toggle-form">
+                    <p>Don't have an account? <a href="#" id="showSignup">Sign up here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-container" id="signupForm">
+        <div class="form-box">
+            <button class="close-btn" id="closeSignup">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2>Create New Account</h2>
+            <form id="signupFormElement">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" name="signupName" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" name="signupEmail" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupStudentId">Student ID</label>
+                    <input type="text" id="signupStudentId" name="signupStudentId" required placeholder="Enter your student ID">
+                </div>   
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="signupPassword" required placeholder="Create a password">
+                </div> 
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" required placeholder="Confirm your password">
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </button>
+                </div>
+                
+                <div class="toggle-form">
+                    <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Smart Library</h3>
+                <p>A modern library management system designed for universities to provide seamless access to books and resources for students and faculty.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#books">Book Collection</a></li>
+                    <li><a href="#request">Request a Book</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 University Ave, Campus City</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> library@university.edu</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 8am-10pm, Sat-Sun: 10am-6pm</li>
+                </ul>
+            </div>
+        </div>  
+        <div class="footer-bottom">
+            <p>&copy; 2023 Smart Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
